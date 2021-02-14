@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title of the document</title>
+        <style>
+            p
+            {
+                color: brown;
+            }
+            #special
+            {
+                color: chartreuse;
+                font-weight: bold;
+            }
+            .make
+            {
+                color:cyan;
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+        
+    <body bgcolor="grey" onload="welcomeHome()">
+            <div>
+                <p>Hi, Ashwin Here</p>
+            </div>
+            <div>
+                <p id="special">Hi, Ashwin Patidar Here</p>
+            </div>
+             
+            <h3 class="make">Class selector</h3>
+            <h1 class="make">Class selector</h1>
+            <h5 class="make">Class selector</h5>
+
+            <form>
+                <input type="text" id="a" name="a" placeholder="Enter Value for a"><br><br>
+                <input type="text" id="b" name="b" placeholder="Enter Value for b"><br><br>
+                
+                <button onclick="Add()">add</button>
+            </form>
+
+            <p id ="xyz"></p>
+            
+            <script>
+                function welcomeHome(){
+                    document.getElementById('xyz').innerHTML="This is P";
+                }
+
+                function Add(){
+                    var x=document.getElementById('a').value;
+                    var y=document.getElementById('b').value;
+                    alert("Result is :"+(parseInt(x)+parseInt(y)));
+                }
+            </script>
+    </body>
+</html>

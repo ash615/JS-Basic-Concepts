@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Loops and Conditions</title>
+    </head>
+    <body>
+        <input type="number" id="num" placeholder="Enter any Number">
+        <br>
+        <button onclick="checkOddEven()">Check</button>
+        
+        <button onclick="primeNumber()">CheckForPrime</button>
+        
+        <script>
+
+            //Th below Function is not returning anything and also not accepting Parameters
+            function primeNumber(){
+                var number=parseInt(document.getElementById("num").value);
+                 
+                var counter=2;
+                var flag=false;
+                while(counter< number){
+
+                    if(number % counter ==0){
+                         
+                        flag=true;
+
+                    }
+                    counter++;
+                }
+
+                if(flag==true){
+                    document.write("The Given Number is Not a Prime  Number");
+                }
+                else{
+                    document.write("Given Number is a Prime Number");
+                }
+
+            }
+
+
+
+            function checkOddEven(){
+                
+                var number=parseInt(document.getElementById("num").value); 
+
+                /*Conditions if 
+                if else
+                elif */
+
+                //EVEN Number
+                if(number % 2==0){
+                    document.write("Given number is Even");
+                }
+                //ODD Number
+                else{
+                    document.write("Given number is Odd");
+                }    
+
+
+                //Single Digit Number
+                if(number<=9){
+                    document.write("<br> Single Digit Number");
+                }
+                //Logical AND Use
+                //Double Digit Number
+                else if(number>9 && number <= 99){
+                    document.write("<br> Two Digit Number");
+                }
+                //Triple Digit Number
+                else if(number>99 && number <=999){
+                    document.write("<br> Triple Digit Number");
+                }
+                else{
+                    document.write("<br> Big Number");
+                
+                }
+
+                //Nested If Condition
+                if(number>100){
+                    if((number%2==0) || (number%3==0)){
+                        document.write("<br> Number is Either divisible by 2 or by 3 or by both");
+                    }
+
+                    else{
+                        document.write("<br> Number is not divisible by 2 or by 3");
+                    }
+                }
+
+
+                /*Loops*/
+
+
+                var counter=0;
+                //While Loop
+                while(counter<number){
+                    document.write("<br>while------> Line Number "+counter);
+                    counter++;
+
+                }
+
+                //for Loop
+                for(var counter=0; counter < number ; counter++ ){
+
+                    document.write("<br> for------> Line Number "+counter);
+                }
+
+
+                //do while Loop
+                var count=0;
+                do{
+                    document.write("<br> do while ------> Line Number "+count);
+                    count++;
+                }while(count<number);
+
+            }
+                  
+                   
+
+        </script>
+    </body>
+</html>

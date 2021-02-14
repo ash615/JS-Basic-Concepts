@@ -1,0 +1,63 @@
+<html>
+
+    
+    <body>
+        <input type="number" id="price" placeholder="Enter the Price">
+        <input type="number" id="tax" placeholder="Enter the Tax ">
+        <br>
+        <button onclick="readValue()">Check</button>
+        
+        
+        <script>
+
+            var manufacturers= ["BMW","Daimler","Ford","Ferrari"];
+            console.log(manufacturers);
+            //var var1=20;
+            //var1=10   reassign possible and redeclaration possible
+            
+            //Function with no parameters and No Return types
+            function readValue() {
+                //let var2=20;
+                //var2=24; reassign possible redecla not
+
+                let price=parseInt(document.getElementById("price").value);
+                let tax=parseInt(document.getElementById("tax").value);
+                
+                //showTaxAmount(price,tax);
+                //const pi=3.14285;
+                let taxAmount=calculateTaxAmount(price,tax);
+                document.write("Tax Amount is: "+ taxAmount);
+            }
+
+            //function with parameter and no return type
+            function showTaxAmount(price, tax) {
+
+                let taxAmount=(price*tax)/100;
+                document.write("Tax Amount is: "+ taxAmount);
+            }
+            
+            //function with parameter and return type both
+            function calculateTaxAmount(price,tax){
+                
+                //let price=parseInt(document.getElementById("price").value);
+                //let tax=parseInt(document.getElementById("tax").value);
+                let taxAmount=(price*tax)/100;
+                return taxAmount;
+            
+            }    
+            
+            //Function with return type and no Parameters
+            function calculateTaxAmountForUserInput(){
+                
+                let price=parseInt(document.getElementById("price").value);
+                let tax=parseInt(document.getElementById("tax").value);
+                let taxAmount=(price*tax)/100;
+                return taxAmount;
+            
+            }
+
+
+
+        </script>
+    </body>    
+</html>
